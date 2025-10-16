@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sathwika M D - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f3f0f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #6a1b9a, #8e24aa);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    section {
+      display: none;
+      padding: 40px 20px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 15px;
+      padding: 12px 28px;
+      background: #8e24aa;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #6a1b9a;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px auto;
+      display: block;
+      border: 4px solid #8e24aa;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .card {
+      background: white;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background: #8e24aa;
+      color: white;
+      width: 35%;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    ul li {
+      background: #f3e5f5;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-radius: 6px;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #6a1b9a;
+    }
+
+    p {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .welcome-container {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #f3e5f5, #ede7f6);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .welcome-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #4a148c;
+      margin-bottom: 10px;
+    }
+
+    .welcome-title span {
+      color: #8e24aa;
+    }
+
+    .welcome-subtitle {
+      font-size: 18px;
+      color: #6a1b9a;
+      margin-bottom: 30px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 600px) {
+      .btn {
+        width: 80%;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      table, th, td {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Welcome to My Portfolio</header>
+
+  <!-- Welcome Page -->
+  <section id="welcome" class="active">
+    <div class="welcome-container">
+      <h1 class="welcome-title">Hello, I'm <span>Sathwika M D</span></h1>
+      <img src="resume.jpg" alt="Profile Photo" class="profile-img">
+      <p class="welcome-subtitle">Aspiring Computer Science Engineer | Lifelong Learner</p>
+      <div class="button-group">
+        <button class="btn" onclick="showPage('resume')">View Resume</button>
+        <button class="btn" onclick="showPage('biodata')">View Biodata</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Biodata Page -->
+  <section id="biodata">
+    <div class="card">
+      <h2>Biodata</h2>
+      <table>
+        <tr><th>Name</th><td>Sathwika M D</td></tr>
+        <tr><th>Date of Birth</th><td>06/04/2005</td></tr>
+        <tr><th>Father's Name</th><td>Damodara M</td></tr>
+        <tr><th>Mother's Name</th><td>Sheelavathi S</td></tr>
+        <tr><th>Address</th><td>Mapaladka House, Jalsoor post & village, Sullia TQ, Dakshina Kannada, India</td></tr>
+        <tr><th>Nationality</th><td>Indian</td></tr>
+        <tr><th>Blood Group</th><td>B+</td></tr>
+        <tr><th>Hobbies</th><td>Reading, Gardening, Listening to music</td></tr>
+        <tr><th>Languages Known</th><td>English, Kannada, Hindi, Tulu, Marathi</td></tr>
+      </table>
+      <div style="text-align:center;">
+        <button class="btn" onclick="showPage('welcome')">⬅ home</button>
+         <button class="btn" onclick="showPage('resume')">View Resume</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Page -->
+  <section id="resume">
+    <div class="card">
+      <h2>Resume</h2>
+      <img src="resume.jpg" alt="Sathwika M D" class="profile-img">
+      <p><strong>SATHWIKA M D</strong></p>
+      <p><strong>Phone:</strong> +91 8618136856</p>
+      <p><strong>Email:</strong> mdsathwika@gmail.com</p>
+
+      <h3>Educational Background</h3>
+      <ul>
+        <li><strong>B.E in Computer Science</strong> - Vivekananda College of Engineering, Puttur</li>
+        <li><strong>PUC (PCMB)</strong> - Shri Sharada PU College, Sullia</li>
+        <li><strong>10th</strong> - Jawahar Navodaya Vidyalaya, Mudipu</li>
+      </ul>
+
+      <h3>Skills</h3>
+      <ul>
+        <li>Good communication</li>
+        <li>Basics of C/C++</li>
+        <li>Basics of Java</li>
+        <li>Basics of Python</li>
+        <li>Resilient and adaptable</li>
+      </ul>
+
+      <h3>Certificates</h3>
+      <ul>
+        <li>Infosys Springboard Certificates</li>
+        <li>Junior Red Cross Certificate</li>
+        <li>Regional Level Kabaddi Certificate</li>
+        <li>State Level Kabaddi Certificate</li>
+        <li>Bharatha Sanskruti Anustana Certificate</li>
+        <li>Bharatiya Sanskriti Gyana Pariksha Certificate</li>
+      </ul>
+      <h3>Projects</h3>
+      <ul>
+        <li>Digital voting system</li>
+        <li>Personalized haircare website</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <ul>
+        <li>Singing</li>
+        <li>Reading books</li>
+         <li>Gardening</li>
+      </ul>
+
+    <h3>Achievements</h3>
+      <ul>
+        <li>State level kabaddi Runnerup</li>
+      </ul>
+
+
+
+      <div style="text-align:center;">
+        <button class="btn" onclick="showPage('welcome')">⬅ home</button>
+         <button class="btn" onclick="showPage('biodata')">View biodata</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(pageId).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
